@@ -24,14 +24,14 @@ class ViewController: UIViewController {
   private func createWithMethods() -> NSAttributedString {
     let hello = StyledString("Hello")
       .withUnderline()
-      .withForegroundColor(.blue)
+      .with(foregroundColor: .blue)
     let world = StyledString("world")
       .withStrikethrough()
-      .withForegroundColor(.red)
+      .with(foregroundColor: .red)
 
     return (hello + " " + world)
       .withShadow()
-      .withFont(.boldSystemFont(ofSize: 50))
+      .with(font: .boldSystemFont(ofSize: 50))
       .attributedString
   }
 
@@ -50,6 +50,5 @@ class ViewController: UIViewController {
 
     return helloWord.attributedString
   }
-
 
 }
